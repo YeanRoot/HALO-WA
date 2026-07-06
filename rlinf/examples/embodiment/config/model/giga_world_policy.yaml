@@ -1,0 +1,49 @@
+model_type: "giga_world_policy"
+
+# In RLinf rollout, model_path is treated as the WA transformer checkpoint path.
+model_path: "/path/to/wa_transformer_ckpt"
+
+precision: bf16
+
+num_action_chunks: 12
+action_dim: 14
+
+is_lora: False
+lora_rank: 32
+
+use_proprio: True
+num_steps: 1
+add_value_head: False
+
+giga_world_policy:
+  wa_root: "/path/to/wan-casual-cj"
+  base_model_dir: "/path/to/Wan2.2-TI2V-5B-Diffusers"
+  norm_json: "/path/to/norm_stats_delta.json"
+  diffusers_src: null
+  robotype: "aloha"
+  num_inference_steps: 10
+  guidance_scale: 0.0
+  num_frames: 5
+  single_view_width: 256
+  single_view_height: 192
+  prompt: null
+  use_safetensors: False
+  wa_num_action_chunks: 48
+
+  # route A: keep frozen WA backbone + latent compressor + small RL heads
+  use_rl_head_for_rollout: False
+
+  cross_attention_dim: 512
+  cross_attention_heads: 8
+  cross_attention_dropout: 0.0
+  cross_attention_time_reduce: "mean"
+  max_visual_tokens: 1024
+
+  bc_coef: 1.0
+  ref_action_dropout_p: 0.5
+  target_tau: 0.005
+  enable_critic_q_upper_bound: True
+  critic_q_upper_bound: 100.0
+  actor_q_loss_clamp_to_upper_bound: True
+  critic_target_clamp_to_upper_bound: True
+  critic_overshoot_penalty_coef: 1.0

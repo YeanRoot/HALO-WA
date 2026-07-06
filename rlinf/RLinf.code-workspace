@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../../models/huggingface"
+		},
+		{
+			"path": "../../../../yejun.zeng"
+		}
+	],
+	"settings": {}
+}

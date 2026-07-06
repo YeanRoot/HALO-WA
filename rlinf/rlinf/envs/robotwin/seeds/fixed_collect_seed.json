@@ -1,0 +1,11 @@
+{
+  "place_empty_cup": {
+    "task_name": "place_empty_cup",
+    "success_seeds": [
+      100100024,
+      100100024,
+      100100024,
+      100100024
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+defaults:
+  - normalbc_pretrained_actor
+  - _self_
+
+runner:
+  logger:
+    experiment_name: "robotwin_train_giga_world_policy_actor_only_frozen_critic"
+
+algorithm:
+  training_stage: full_rl
+  bc_coef: 0.0
+  freeze_critic_updates: true
+  freeze_actor_updates: false
+  freeze_visual_layers: false
