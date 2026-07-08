@@ -1,5 +1,14 @@
 # HALO-WA
 
+<p align="center">
+  <img src="assets/halo-wa-main-figure.png" alt="HALO-WA overview" width="100%">
+</p>
+
+<p align="center">
+  <strong>HALO-WA: Hybrid-Attention Latent-Guided Online Reinforcement Learning for World-Action Models</strong><br>
+  <a href="https://arxiv.org/abs/2607.04265">arXiv:2607.04265</a>
+</p>
+
 HALO-WA packages the GigaWA RoboTwin online RL experiments as a small project
 wrapper around the RLinf-based training code. The top-level repository is kept
 focused on setup, data download, and the two supported task entrypoints.
@@ -9,6 +18,7 @@ focused on setup, data download, and the two supported task entrypoints.
 ```text
 HALO-WA/
 |-- rlinf/                 # RLinf-based training code and configs
+|-- assets/                # README figures
 |-- data/                  # Artifact links and optional local downloads
 |-- scripts/               # Download and task launch scripts
 |-- environment.yml        # Public conda environment exported from pi-rl
@@ -185,3 +195,19 @@ single training step on the development server:
 
 - `online_rl_hammer_ansyc`: reached `Global Step: 1/1`.
 - `online_rl_bell_ansyc`: reached `Global Step: 1/1`.
+
+## Citation
+
+If you find HALO-WA useful, please cite:
+
+```bibtex
+@misc{ye2026halowahybridattentionlatentguidedonline,
+      title={HALO-WA: Hybrid-Attention Latent-Guided Online Reinforcement Learning for World-Action Models},
+      author={Angen Ye and Weijie Ke and Xiaofeng Wang and Xinze Chen and Chaojun Ni and Guosheng Zhao and Boyuan Wang and Zheng Zhu and Junjie Xie and Dapeng Zhang},
+      year={2026},
+      eprint={2607.04265},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2607.04265},
+}
+```
